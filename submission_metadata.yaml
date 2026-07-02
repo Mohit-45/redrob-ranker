@@ -4,22 +4,22 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "TODO-your-team-name"
+team_name: "Mohit"
 
 primary_contact:
-  name: "TODO Full Name"
-  email: "techdev.ai@lenskart.com"
-  phone: "+91-TODO"
+  name: "Mohit"
+  email: "kumarmk.9138@gmail.com"
+  phone: "+91-9138313628"
 
 team_members:
-  - name: "TODO Full Name"
-    email: "techdev.ai@lenskart.com"
-    role: "ML Engineer"
+  - name: "Mohit"
+    email: "kumarmk.9138@gmail.com"
+    role: "Frontend Engineer"
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/TODO_USERNAME/redrob-ranker"
+github_repo: "https://github.com/Mohit-45/redrob-ranker"
 
 sandbox_link: "https://TODO-deploy-sandbox-app"
 # Deploy sandbox/app.py to Streamlit Cloud or HuggingFace Spaces
