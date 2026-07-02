@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+# the released pool is ~465 MB — keep it out of the repo
+candidates.jsonl
+candidates.jsonl.gz

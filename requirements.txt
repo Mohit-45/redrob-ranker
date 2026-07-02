@@ -1,0 +1,4 @@
+# The ranking pipeline (rank.py + ranker/) uses the Python standard library
+# only — nothing to install. Python 3.10+.
+#
+# The optional hosted sandbox UI has its own deps: see sandbox/requirements.txt
