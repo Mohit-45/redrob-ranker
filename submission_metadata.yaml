@@ -1,0 +1,90 @@
+# Redrob Hackathon — Submission Metadata
+# Fill in the placeholders marked TODO before uploading.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "TODO-your-team-name"
+
+primary_contact:
+  name: "TODO Full Name"
+  email: "techdev.ai@lenskart.com"
+  phone: "+91-TODO"
+
+team_members:
+  - name: "TODO Full Name"
+    email: "techdev.ai@lenskart.com"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/TODO_USERNAME/redrob-ranker"
+
+sandbox_link: "https://TODO-deploy-sandbox-app"
+# Deploy sandbox/app.py to Streamlit Cloud or HuggingFace Spaces
+# (deps: sandbox/requirements.txt). It runs the exact ranking pipeline on an
+# uploaded candidate sample and returns the ranked CSV.
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+# End-to-end on the full 100K pool: ~56 s wall-clock, ~275 MB RAM, CPU only,
+# no network, standard library only.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook (Apple Silicon)"
+  cpu_cores: 10
+  ram_gb: 16
+  python_version: "3.13.1"
+  os: "macOS 15"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude (Claude Code) for dataset exploration, architecture design,
+  implementation, and code review of the rule-based ranker. All ranking logic
+  is deterministic Python executed locally; no LLM is called at ranking time
+  and no candidate data was sent to any hosted AI service by the ranker.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Deterministic feature-based ranker: score = fit x trust x behavioral x
+  logistics. Fit is mined from what candidates DID (career-history
+  descriptions, summary, headline) via word-boundary-safe phrase evidence
+  groups mirroring the JD's must-haves (production embeddings/retrieval,
+  ranking/recsys, evaluation rigor, scale), plus title family, a soft 6-8y
+  experience peak, product-company and recruiting-domain exposure; the
+  self-declared skills list contributes only weak, assessment-corroborated
+  credit, and non-engineering titles are gated to 5% — defusing keyword
+  stuffers. Trust counts independent profile impossibilities (skill months
+  exceeding a technology's age or the whole career, "expert" with zero use,
+  claimed years the career history cannot contain, jobs predating the
+  employer's founding); honest profiles carry 0-2, honeypots cluster at 3+
+  and fall off a multiplier cliff, yielding zero flagged profiles in the
+  top 100. Behavioral (last-active recency, response rate, open-to-work,
+  interview completion) and logistics (Pune/Noida > NCR/Mumbai/Hyderabad >
+  Tier-1 India > abroad; notice period) multipliers capture reachability.
+  Reasoning strings are assembled from the extracted facts with honest
+  concerns. Full pool: ~56 s, ~275 MB, stdlib-only CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
