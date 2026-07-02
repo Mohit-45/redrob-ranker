@@ -21,10 +21,10 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Mohit-45/redrob-ranker"
 
-sandbox_link: "https://TODO-deploy-sandbox-app"
-# Deploy sandbox/app.py to Streamlit Cloud or HuggingFace Spaces
-# (deps: sandbox/requirements.txt). It runs the exact ranking pipeline on an
-# uploaded candidate sample and returns the ranked CSV.
+sandbox_link: "https://redrob-ranker-mohit.streamlit.app/"
+# Streamlit Cloud deployment of sandbox/app.py. It runs the exact ranking
+# pipeline on an uploaded candidate sample (e.g. examples/sample_200.jsonl)
+# and returns the ranked CSV.
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 # End-to-end on the full 100K pool: ~56 s wall-clock, ~275 MB RAM, CPU only,
