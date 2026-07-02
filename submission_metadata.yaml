@@ -30,6 +30,9 @@ reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submi
 # End-to-end on the full 100K pool: ~56 s wall-clock, ~275 MB RAM, CPU only,
 # no network, standard library only.
 
+presentation_link: "https://docs.google.com/presentation/d/1uZp0et7NhLxcWfQ62sUJJoOIJs5v1H2KhaFB5HChwCU/edit?usp=sharing"
+# Idea-submission deck (Google Slides, link-viewable).
+
 # ============================================================================
 # Compute environment
 # ============================================================================
