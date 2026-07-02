@@ -130,6 +130,7 @@ ranker/scoring.py       fit + behavioral + logistics, final combine
 ranker/reasoning.py     fact-based reasoning strings
 tests/test_ranker.py    unit tests (traps, boundaries, determinism)
 sandbox/app.py          Streamlit demo app for the hosted sandbox
+examples/sample_200.jsonl  200-candidate sample (every 500th) for sandbox demos
 submission.csv          top-100 output of rank.py on the released pool
 ```
 
